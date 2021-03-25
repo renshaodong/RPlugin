@@ -16,4 +16,11 @@
         <listener class="com.github.renshaodong.rplugin.listeners.MyProjectManagerListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </applicationListeners>
+    <actions>
+        <action id="com.github.renshaodong.rplugin.action.ParseIcons"
+                class="com.github.renshaodong.rplugin.action.ParseIcons" text="GenerateIcons"
+                description="Generate IconData from iconfont.json">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </action>
+    </actions>
 </idea-plugin>

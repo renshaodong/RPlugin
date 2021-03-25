@@ -36,7 +36,8 @@ dependencies {
 // Read more: https://github.com/JetBrains/gradle-intellij-plugin
 intellij {
     pluginName = properties("pluginName")
-    version = properties("platformVersion")
+//    version = properties("platformVersion")
+    localPath = "/Applications/IntelliJ IDEA.app"
     type = properties("platformType")
     downloadSources = properties("platformDownloadSources").toBoolean()
     updateSinceUntilBuild = true
@@ -107,9 +108,9 @@ tasks {
         )
     }
 
-    runPluginVerifier {
-        ideVersions(properties("pluginVerifierIdeVersions"))
-    }
+//    runPluginVerifier {
+//        ideVersions(properties("pluginVerifierIdeVersions"))
+//    }
 
     publishPlugin {
         dependsOn("patchChangelog")
