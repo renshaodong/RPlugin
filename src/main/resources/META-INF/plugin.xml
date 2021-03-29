@@ -17,9 +17,13 @@
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </applicationListeners>
     <actions>
-        <action id="com.github.renshaodong.rplugin.action.ParseIcons"
-                class="com.github.renshaodong.rplugin.action.ParseIcons" text="GenerateIcons"
+        <action id="com.github.renshaodong.rplugin.action.GenerateIcons"
+                class="com.github.renshaodong.rplugin.action.GenerateIcons" text="Generate Icons"
                 description="Generate IconData from iconfont.json">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </action>
+        <action id="com.github.renshaodong.rplugin.action.GenerateImageAssets"
+                class="com.github.renshaodong.rplugin.action.GenerateImageAssets" text="Generate Image Assets">
             <add-to-group group-id="ToolsMenu" anchor="last"/>
         </action>
     </actions>

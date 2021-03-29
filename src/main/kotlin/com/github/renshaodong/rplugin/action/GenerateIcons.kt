@@ -9,7 +9,7 @@ import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.fileChooser.FileChooser
 import com.intellij.openapi.fileChooser.FileChooserDescriptorFactory
 
-class ParseIcons : AnAction() {
+class GenerateIcons : AnAction() {
 
     override fun actionPerformed(e: AnActionEvent) {
         val desc = FileChooserDescriptorFactory.createSingleFileDescriptor("json")

@@ -15,10 +15,10 @@ fun VirtualFile.findOrCreateDir(dirName: String): VirtualFile {
 fun Project.findOrCreateTargetFile(pathList: Array<String>): VirtualFile {
     var file = LocalFileSystem.getInstance().findFileByPath(basePath!!)!!
     pathList.forEachIndexed { index, path ->
-        if (index == pathList.size - 1) {
-            file = file.findOrCreateChildData(null, path)
+        file = if (index == pathList.size - 1) {
+            file.findOrCreateChildData(null, path)
         } else {
-            file = file.findOrCreateDir(path)
+            file.findOrCreateDir(path)
         }
     }
     return file
